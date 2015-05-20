@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="286.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MCcontroller">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="174.0" minWidth="10.0" prefWidth="129.0" />
+      <ColumnConstraints maxWidth="241.0" minWidth="10.0" prefWidth="177.0" />
+   </columnConstraints>
+   <children>
+      <Label text="Total Gross Income" />
+      <Label text="Total Monthly Debt" GridPane.rowIndex="1" />
+      <Label text="Interest Rate" GridPane.rowIndex="2" />
+      <Label text="Term" GridPane.rowIndex="3" />
+      <Label text="House Payment" GridPane.rowIndex="5" />
+      <TextField fx:id="income" onKeyReleased="#handleCalculate" prefHeight="25.0" prefWidth="66.0" promptText="Ex: 1500" GridPane.columnIndex="1" />
+      <TextField fx:id="debt" onAction="#handleCalculate" onKeyTyped="#handleCalculate" promptText="Ex: 850" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="interest" onKeyReleased="#handleCalculate" promptText="Ex: .045" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label fx:id="housePayment" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <ChoiceBox fx:id="term" onInputMethodTextChanged="#handleCalculate" prefHeight="25.0" prefWidth="204.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="Down Payment" GridPane.rowIndex="4" />
+      <TextField fx:id="downPayment" onAction="#handleCalculate" onKeyTyped="#handleCalculate" promptText="Ex: 1000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label text="Total Payment" GridPane.rowIndex="6" />
+      <Label text="Maximum Payment" GridPane.rowIndex="7" />
+      <Label text="Max Mortgage" GridPane.rowIndex="8" />
+      <Label fx:id="totalPayment" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label fx:id="maximumPayment" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label fx:id="maximumMortgage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Button fx:id="calculate" mnemonicParsing="false" onAction="#handleCalculate" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Button fx:id="clear" mnemonicParsing="false" onAction="#handleClear" text="Reset" GridPane.rowIndex="9" />
+   </children>
+   <padding>
+      <Insets left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>
